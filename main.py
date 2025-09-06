@@ -14,10 +14,6 @@ app.add_middleware(
 
 @app.get("/api/tiktok/{username}")
 async def get_tiktok_videos(username: str):
-    """
-    Lấy danh sách video từ username TikTok
-    Trả về nhanh (chỉ id, title, url TikTok)
-    """
     url = f"https://www.tiktok.com/@{username}"
 
     ydl_opts = {
