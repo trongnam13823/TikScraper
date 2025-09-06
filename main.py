@@ -43,7 +43,7 @@ async def get_tiktok_videos(username: str):
                 for v in info["entries"]
             ]
 
-            return {"username": username, "videos": videos}
+            return videos
 
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Cannot fetch videos: {e}")
